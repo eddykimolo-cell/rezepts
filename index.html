@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Rezepte Sammlung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍳 Meine Rezepte Sammlung</h1>
+        <button id="showFormBtn">+ Neues Rezept</button>
+    </header>
+
+    <main>
+        <!-- Filter Section -->
+        <div class="filters">
+            <select id="categoryFilter">
+                <option value="all">Alle Kategorien</option>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarisch">Vegetarisch</option>
+                <option value="mit Fleisch">Mit Fleisch</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Rezepte durchsuchen...">
+        </div>
+
+        <!-- Recipes Grid -->
+        <div id="recipesGrid" class="recipes-grid"></div>
+    </main>
+
+    <!-- Recipe Detail Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="recipeDetail"></div>
+        </div>
+    </div>
+
+    <!-- Add Recipe Form -->
+    <div id="recipeFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close-form">&times;</span>
+            <h2>Neues Rezept hinzufügen</h2>
+            <form id="addRecipeForm">
+                <input type="text" id="title" placeholder="Titel" required>
+                <input type="text" id="description" placeholder="Beschreibung" required>
+                <textarea id="ingredients" placeholder="Zutaten (eine pro Zeile)" required></textarea>
+                <textarea id="steps" placeholder="Schritte (eine pro Zeile)" required></textarea>
+                <input type="text" id="time" placeholder="Zeit (z.B. 20 min)" required>
+                <select id="category" required>
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarisch">Vegetarisch</option>
+                    <option value="mit Fleisch">Mit Fleisch</option>
+                </select>
+                <input type="text" id="calories" placeholder="Kalorien" required>
+                <input type="text" id="image" placeholder="Emoji (z.B. 🍛)" required>
+                <button type="submit">Rezept speichern</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
